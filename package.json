@@ -1,0 +1,36 @@
+{
+  "name": "covid19-discord-bot",
+  "version": "1.0.0",
+  "description": "Discord bot to return status of the COVID-19",
+  "main": "app.js",
+  "scripts": {
+    "start:dev": "nodemon --exec babel-node ./src/app"
+  },
+  "dependencies": {
+    "discord.js": "^12.0.2",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.0",
+    "nodemon": "^2.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MisterDaniels/covid19-discord-bot.git"
+  },
+  "keywords": [
+    "covid",
+    "coronavirus",
+    "discord",
+    "bot"
+  ],
+  "author": "Daniel Silva <dodosilva51@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MisterDaniels/covid19-discord-bot/issues"
+  },
+  "homepage": "https://github.com/MisterDaniels/covid19-discord-bot#readme"
+}
