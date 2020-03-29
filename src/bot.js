@@ -1,10 +1,10 @@
 import { messageHandler } from './messageHandler';
-import { clientProcessor } from './clientProcessor';
+import { processClient } from './clientProcessor';
 import { config } from './config';
 
 const CovidBot = class CovidBot {
     constructor() {
-        this.client = clientProcessor(config.token);
+        this.client = processClient(config.token);
         this.messageHandler = messageHandler;
     }
 }

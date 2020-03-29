@@ -1,6 +1,8 @@
 import { config } from './config';
 
-const messageHandler = (client, message) => {
+import translateHandler from './utils/translateHandler';
+
+const messageHandler = async (client, message) => {
     
     if (!message.content.startsWith(config.prefix) || message.author.bot) {
         return null;
@@ -8,9 +10,12 @@ const messageHandler = (client, message) => {
 
     let args = message.content.slice(config.prefix.length).split(' ');
     let controllerName = args.shift().toLowerCase();
-    let controller = client.controllers.get(controllerName) ||
+
+    let controllerNameTranslated = await translateHandler(controllerName);
+
+    let controller = client.controllers.get(controllerNameTranslated) ||
         client.controllers.find(ctr => ctr.aliases &&
-            ctr.aliases.includes(controllerName));
+            ctr.aliases.includes(controllerNameTranslated));
 
     if (!controller) { return null };
 
