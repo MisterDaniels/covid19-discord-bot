@@ -1,9 +1,7 @@
 const Discord = require('discord.js');
 
-import { getLastUpdate, getStatusByCountry } from '../services/apiRequest';
+import { getLastUpdate } from '../services/apiRequest';
 import { variables } from '../variables/variables';
-
-console.log(getStatusByCountry('Brazil'));
 
 module.exports = {
     name: 'help',
